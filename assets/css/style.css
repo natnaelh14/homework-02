@@ -32,7 +32,8 @@ header nav {
 }
 
 header ul {
-  display: flex; /*ensures that nav content stays in one row.*/
+  /*ensures that nav content stays in one row.*/
+  list-style-type: none; /*removes bullets from list.*/
 }
 
 header li:hover { /* adds animation in the nav list. */

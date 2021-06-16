@@ -1,7 +1,7 @@
 # Project name 
 Profolio Website
 
-GitHub Link:
+GitHub Link:  https://natnaelh14.github.io/homework-02/
 
 The purpose of the assignment was to replicate the website along with the functionality.
 
