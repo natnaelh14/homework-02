@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #ffffff;
+  font-family: SDejaVu Sans Mono, monospace; /* establish the font for the page. */
+}
+
+/*HEADER*/
+header {
+  padding: 20px 20px 20px 0px;
+  background-color: #404040;
+  color: #000000;
+  display: flex;
+  align-items: center; /* places the nav in the center.*/
+  justify-content: space-between;
+}
+
+header .logo {
+  font-size: 44px;
+  background-color: #bff3e2;
+  padding: 15px 15px 15px 75px;
+  opacity: 0.8;
+}
+header nav {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 75px;
+}
+
+header ul {
+  display: flex; /*ensures that nav content stays in one row.*/
+}
+
+header li:hover { /* adds animation in the nav list. */
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.logo:hover { /* adds opacity animation to the logo.*/
+  opacity: 1;
+}
+
+header a {
+  color: #bff3e2;
+  text-decoration: underline 4px solid #bff3e2;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* IMAGE SECTION */
+.hero-image {
+  background-image: url(../images/image-04.jpg);  /*attached image for the hero image.*/
+  height: 250px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  text-align: center;
+}
+
+.minibox-01 { /*add styling and determines placement of the text 'cool subtitle here!'*/
+  background-color: #bff3e2;
+  height: auto;
+  padding: 10px;
+  position: absolute;
+  right: 5%;
+  bottom:6%;
+}
+
+/* TEXT SECTION */
+
+.aboutme-container { /* creates two columns within aboutme-container */
+  display: flex;
+  margin-right:75px;
+  gap:25px;
+}
+
+#about-me {
+  flex-basis: 25%;
+  text-align: right;
+  padding-right: 10px;;
+  border-right: solid black;
+}
+
+.text-content {
+  flex-basis:75%;
+}
+
+.column-01 {
+  margin: 20px 0px 20px 0px;
+}
+
+p2 {
+  font-size: 15px;
+}
+
+h2 {
+  font-size: 44px;
+  color:#0e164a;
+}
+
+/* MAIN SECTION */
+main { /* contains the large box and the four small boxes */
+  display: flex; /*divides the column into two columns.*/
+  margin-right: 75px;
+  gap: 25px;
+}
+
+#work {
+  flex-basis: 25%;
+  text-align: right;
+  padding-right: 10px;;
+  border-right: solid black;
+}
+
+.main-box {
+  flex-basis: 75%;
+}
+
+#row-01 {
+  background-image: url(../images/image-04.jpg);
+  opacity: 0.8;
+  border: 7px solid #bff3e2;
+  height: 400px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  font-size: 1.2rem;
+  word-break: break-word;
+  padding-bottom: 5%;
+}
+
+#row-01:hover {
+  opacity: 1;
+}
+
+.minibox-02 {
+  background-color: #bff3e2;
+  height: auto;
+  padding: 10px;
+  text-align: left;
+}
+
+#row-02 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px 0px 25px 0px;
+  gap: 25px;
+}
+
+.box:hover {
+  opacity: 1;
+}
+
+.box {
+  height: 150px;
+  width: 100%;
+  border: 7px solid#BFF3E2;
+  opacity: 0.8;
+  cursor: pointer;
+  background-image: url(../images/image-04.jpg);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-bottom: 2%;
+  flex: 45%;
+
+}
+
+.minibox-03 {
+  background-color: #bff3e2;
+  height: auto;
+  padding: 10px;
+  text-align: left;
+}
+
+p1 {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+main span {
+  font-size: 14px;
+}
+
+/* FOOTER SECTION */
+footer {
+  display: flex; /*divide the content into two columns*/
+  margin: 25px 75px 25px 0px;
+  gap: 25px;
+
+}
+
+#contact-me {
+  flex-basis: 25%;
+  text-align: right;
+  padding-right: 10px;;
+  border-right: solid black;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  list-style-type: none; /*removes bullets from list.*/
+  flex-basis: 75%;
+
+}
+
+footer li, footer a {
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+  text-decoration: underline 4px solid #bff3e2;
+}
+
+footer li:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/* REDUCED PAGE SIZE */
+@media screen and (max-width: 900px) { /*if the browser os less than 900px width, the following code will apply*/
+  /*Header Smaller Size*/
+  header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header a {
+    font-size: 15px;;
+  }
+
+  header .logo {
+    padding: 15px;
+  }
+
+  header ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  header li {
+    padding: 5px;
+    margin: 5px;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+  }
+
+  /* TEXT SECTION Smaller Size */
+  p2 {
+    font-size: 10px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  /* MAIN SECTION Smaller Size */
+  .box {
+    flex: 100%;
+  }
+
+  p1 {
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  main span {
+    font-size: 10px;
+  }
+
+  /* FOOTER SECTION Smaller Size */
+
+  footer li, footer a {
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  footer ul {
+    flex-direction: column;
+  }
+
+}
